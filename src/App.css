@@ -311,6 +311,7 @@ width: 70%;
 }
 .provider-container{
     display: flex;
+    margin-bottom:0px;
     justify-content: space-between;
 }
 .provider-name{

@@ -16,7 +16,6 @@ function App() {
                         <Routes>
                             <Route exact path='/' element={<Homepage/>}/>
                                 
-                            
                             <Route exact path='/cryptocurrencies' element={<Cryptocurrencies/>}/>
 
                             <Route exact path='/exchanges' element={<Exchanges/>}/>
