@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import millify from 'millify';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Input } from 'antd';
 
@@ -13,7 +12,7 @@ const Cryptocurrencies = ({ simplified }) => {
   const { data: exchangeRate } = useGetExchangeRateQuery();
   const [cryptos, setCryptos] = useState();
   const [searchTerm, setSearchTerm] = useState('');
-  console.log("Exchange Rate = ",exchangeRate)
+
   useEffect(() => {
     setCryptos(cryptosList?.data?.coins);
 
@@ -36,8 +35,8 @@ const Cryptocurrencies = ({ simplified }) => {
           <Col xs={24} sm={12} lg={6} className="crypto-card" key={currency.id}>
             <Link key={currency.id} to={`/crypto/${currency.id}`}>
               <Card title={`${currency.rank}. ${currency.name}`} extra={<img className="crypto-image" src={currency.iconUrl} />} hoverable>
-                <p>Price: ₹{millify(currency.price*exchangeRate)}</p>
-                <p>Market Cap: ₹{millify(currency.marketCap*exchangeRate)}</p>
+                <p>Price: ₹{new Intl.NumberFormat('en-IN', {notation: "compact",maximumFractionDigits: 1}).format(currency.price*exchangeRate)}</p>
+                <p>Market Cap: ₹{new Intl.NumberFormat('en-IN', {notation: "compact",maximumFractionDigits: 1}).format(currency.marketCap*exchangeRate)}</p>
                 <p>Daily Change: {currency.change}%</p>
               </Card>
             </Link>

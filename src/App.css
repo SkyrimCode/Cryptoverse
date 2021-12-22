@@ -22,9 +22,14 @@ a:hover{
     overflow: hidden;
 }
 
+.link *{
+    color:#FFF !important;
+}
+
+
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    background-color: #232e40;
 }
 
 .main{
@@ -36,24 +41,33 @@ a:hover{
     padding: 20px;
 }
 .nav-container{
-    position: fixed;
+
     left: 0;
     margin: 10px;
     height: 100vh;
     margin: 0px;
-    background-color: rgb(0, 21, 41);
+    background-color: #232e40;
 }
 
 .logo-container{
-    background-color: #001529;
+    background-color: #232e40;
     display: flex;
     padding: 20px;
     align-items: center;
     width: 100%;
 }
-.logo{
-    margin:0 0 0 15px;
+
+.menu{
+     background-color: #232e40 !important; 
 }
+
+.opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* .logo{
+    margin:0 0 0 15px;
+} */
 .logo a{
    color: white;
 }
@@ -371,7 +385,7 @@ width: 70%;
 }
 
 .footer {
-    background-color: #001529;
+    background-color: #232e40;
     display: flex;
     flex-direction: column;
     padding: 20px;
