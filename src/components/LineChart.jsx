@@ -6,6 +6,7 @@ import { useGetExchangeRateQuery } from '../services/exchangeRateApi';
 const { Title } = Typography;
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
+  console.log("CH,CP,CN",coinHistory,currentPrice,coinName)
   const coinPrice = [];
   const coinTimestamp = [];
   const { data: exchangeRate } = useGetExchangeRateQuery();
